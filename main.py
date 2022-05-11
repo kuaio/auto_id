@@ -16,7 +16,6 @@ import re
 import telegram
 import requests
 
-
 mypath = os.path.split(os.path.realpath(__file__))[0]
 chromedriver = ""
 if os.name == "nt":
@@ -44,30 +43,21 @@ token = ''
 chat_id = ''
 delay = 10
 
-
 # 查找元素 by class
-
 
 def find_element_by_class(driver, class_name):
     return WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CLASS_NAME, class_name)), '未找到 Class 为 "%s" 的元素' % class_name)
-
-
 # 查找元素 by id
-
 
 def find_element_by_id(driver, id):
     return WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.ID, id)), '未找到 id 为 "%s" 的元素' % id)
 
-
 # 查找元素并且是可用状态 by class
-
 
 def find_enable_by_class(driver, class_name):
     return WebDriverWait(driver, delay).until(EC.element_to_be_clickable((By.CLASS_NAME, class_name)), '元素 "%s" 不可用' % class_name)
 
-
 # 发送TG消息
-
 
 def sendMsg(msg):
     print(msg)
@@ -77,7 +67,6 @@ def sendMsg(msg):
     bot.send_message(chat_id=chat_id, text=msg)
 
 # 更新网站上的密码
-
 
 def update_pwd(api_host, apple_id, passwd):
     if len(api_host) == 0:
@@ -96,7 +85,7 @@ def update_pwd(api_host, apple_id, passwd):
 def createPwd(passwordLength):
     pw = ''
     # * 2 增加数字和特殊字符出现的概率
-    str = string.digits * 2 + string.ascii_letters + '!@#$%^&*()_+=-' * 2
+    str = string.digits * 2 + string.ascii_letters + '!@#$&*_+=-' * 2
     while True:
         # 不包含重复字符的密码
         pw = ''.join(random.sample(str, k=passwordLength))
@@ -108,9 +97,7 @@ def createPwd(passwordLength):
         else:
             print("密码：%s 强度不够" % pw)
 
-
 # 解锁操作
-
 
 def check_appleid(item):
     apple_id = item["id"]
@@ -177,7 +164,7 @@ def check_appleid(item):
             find_enable_by_class(driver, "last").click()
             # 设置密码 createPwd
             find_element_by_id(driver, "password")
-            pwd_new = createPwd(12)
+            pwd_new = createPwd(9)
             pwd_inputs = driver.find_elements(
                 by=By.CLASS_NAME, value="form-textbox-input")
             pwd_inputs[0].send_keys(pwd_new)
@@ -229,7 +216,7 @@ def check_appleid(item):
             find_element_by_class(driver, "pwdChange").click()
             # 等待密码框出现
             find_element_by_id(driver, "password")
-            pwd_new = createPwd(12)
+            pwd_new = createPwd(9)
             pwd_inputs = driver.find_elements(
                 by=By.CLASS_NAME, value="form-textbox-input")
             pwd_inputs[0].send_keys(pwd_new)
@@ -272,7 +259,7 @@ def check_appleid(item):
             find_enable_by_class(driver, "last").click()
             time.sleep(3)
             # 设置密码 createPwd
-            pwd_new = createPwd(12)
+            pwd_new = createPwd(9)
             pwd_inputs = driver.find_elements(
                 by=By.CLASS_NAME, value="form-textbox-input")
             pwd_inputs[0].send_keys(pwd_new)

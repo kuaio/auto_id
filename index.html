@@ -37,7 +37,7 @@
                     <div class="layui-carousel" id="test1">
                         <div carousel-item>
                             <div>
-                                <p class="layui-bg-green demo-carousel">请不登录 iCloud</p>
+                                <p class="layui-bg-green demo-carousel">请不要登录 iCloud</p>
                             </div>
                             <div>
                                 <p class="layui-bg-red demo-carousel">请不要绑定手机</p>
@@ -68,14 +68,14 @@
                                 <div style="padding: 50px 30px;line-height: 50px;">
                                     <div class="apple-item">
                                         <div class="apple-title">账号`+ (parseInt(i) + 1) + `：</div>
-                                        <div><button type="button" data-clipboard-text="`+ item['id'] + `"  class="copy-btn layui-btn">点我复制，请勿绑定手机！</button></div>
+                                        <div><button type="button" data-clipboard-text="`+ item['id'] + `"  class="copy-btn layui-btn">点我复制，请不要绑定手机！</button></div>
                                     </div>
                                     <div class="apple-item">
                                         <div class="apple-title">密码`+ (parseInt(i) + 1) + `：</div>
-                                        <div><button type="button" data-clipboard-text="`+ item['passwd'] + `" class="copy-btn layui-btn layui-btn-danger">点我复制，登录iCloud！会变砖！</button></div>
+                                        <div><button type="button" data-clipboard-text="`+ item['passwd'] + `" class="copy-btn layui-btn layui-btn-danger">点我复制，不要开双重认证！</button></div>
                                     </div>                                    
                                     <div class="apple-item">
-                                        <div class="apple-title">状态：</div>
+                                        <div class="apple-title">状态(parseInt(i) + 1)：</div>
                                         <div> `+ (item['status'] ? '<span class="layui-badge layui-bg-green">正常</span>' : '<span class="layui-badge layui-bg-black">维护中</span>') + `</div>
                                     </div>
                                     <div class="apple-item">

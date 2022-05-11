@@ -4,21 +4,15 @@
     "apple_id": [
         {
             "id": "",
-            "passwd": "HOKVAp!PDE7x",
-            "dob": "12/13/2012",
-            "qa": {"你少年时代最好的朋友叫什么名字？":"你的答案","你的父母是在哪里认识的？":"你的答案","你的理想工作是什么？":"你的答案"},
-            "last_reset_time": 0,
-            "reset_pwd_interval": 600,
-            "status": 1,
-            "api_host": ""
-        },
-        {
-            "id": "",
-            "passwd": "f-8grJzI0)Q=",
-            "dob": "12/13/2012",
-            "qa": {"您最喜欢哪个球队？":"你的答案","你少年时代最好的朋友叫什么名字？":"你的答案","你的理想工作是什么？":"你的答案"},
-            "last_reset_time": 0,
-            "reset_pwd_interval": 600,
+            "passwd": "",
+            "dob": "05/24/1988",
+            "qa": {
+                "\u4f60\u7684\u7b2c\u4e00\u4e2a\u5ba0\u7269\u53eb\u4ec0\u4e48\u540d\u5b57\uff1f": "",
+                "\u4f60\u62e5\u6709\u7684\u7b2c\u4e00\u8f86\u8f66\u662f\u4ec0\u4e48\u578b\u53f7\uff1f": "",
+                "\u4f60\u7684\u7236\u6bcd\u662f\u5728\u54ea\u91cc\u8ba4\u8bc6\u7684\uff1f": ""
+            },
+            "last_reset_time": 1652257591,
+            "reset_pwd_interval": 60,
             "status": 1,
             "api_host": ""
         }
