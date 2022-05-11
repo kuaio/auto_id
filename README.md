@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  基于安全问题实现自动解锁 Apple ID 等功能
  
@@ -71,3 +72,7 @@ crontab -e
 * Apple-ID-Auto：https://github.com/iSteal-it/Apple-ID-Auto
 * Baidu: https://www.baidu.com 
 * Google: https://www.google.com
+=======
+# auto_id
+基于安全问题自动解锁 Apple ID
+>>>>>>> 1ca05842db7dc6afe28167e5c165f1ae1057de8c
