@@ -36,7 +36,7 @@ api_host | api地址 | 如果此项不为空，会在修改密码后请求此地
 - 进入网站目录
 - 下载代码 
 ```
-git clone https://github.com/balala2oo8/AppleIDAuto.git .
+git clone https://github.com/kuaio/auto_id.git .
 ```
 - 安装依赖
 ```
