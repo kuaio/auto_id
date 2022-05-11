@@ -319,7 +319,7 @@ for i, item in enumerate(apple_ids):
 
 # 构造一个 json 数据，供静态 HTML 使用
 print('正在写入 JSON 数据...')
-with open(mypath + '/data.json', 'w', encoding='utf-8') as f:
+with open(mypath + '/id.json', 'w', encoding='utf-8') as f:
     json.dump(apple_data, f, indent=4)
 if save:
     print('正在更新 config 数据...')

@@ -40,7 +40,7 @@
                                 <p class="layui-bg-green demo-carousel">请不要登录 iCloud</p>
                             </div>
                             <div>
-                                <p class="layui-bg-red demo-carousel">请不要绑定手机</p>
+                                <p class="layui-bg-red demo-carousel">请不要绑定手机号</p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
     <script src="./layui/clipboard.min.js"></script>
     <script src="./layui/layui.js" charset="utf-8"></script>
     <script>
-        $.getJSON("./data.json", function(data) {
+        $.getJSON("./id.json", function(data) {
             let html = ''
             for (const i in data) {
                 let item = data[i];
@@ -68,14 +68,14 @@
                                 <div style="padding: 50px 30px;line-height: 50px;">
                                     <div class="apple-item">
                                         <div class="apple-title">账号`+ (parseInt(i) + 1) + `：</div>
-                                        <div><button type="button" data-clipboard-text="`+ item['id'] + `"  class="copy-btn layui-btn">点我复制，请不要绑定手机！</button></div>
+                                        <div><button type="button" data-clipboard-text="`+ item['id'] + `"  class="copy-btn layui-btn">点击复制，请不要绑定手机号</button></div>
                                     </div>
                                     <div class="apple-item">
                                         <div class="apple-title">密码`+ (parseInt(i) + 1) + `：</div>
-                                        <div><button type="button" data-clipboard-text="`+ item['passwd'] + `" class="copy-btn layui-btn layui-btn-danger">点我复制，不要开双重认证！</button></div>
+                                        <div><button type="button" data-clipboard-text="`+ item['passwd'] + `" class="copy-btn layui-btn layui-btn-danger">点击复制，不要开启双重认证</button></div>
                                     </div>                                    
                                     <div class="apple-item">
-                                        <div class="apple-title">状态(parseInt(i) + 1)：</div>
+                                        <div class="apple-title">状态`+ (parseInt(i) + 1) + `：</div>
                                         <div> `+ (item['status'] ? '<span class="layui-badge layui-bg-green">正常</span>' : '<span class="layui-badge layui-bg-black">维护中</span>') + `</div>
                                     </div>
                                     <div class="apple-item">
@@ -123,7 +123,7 @@
         });
     </script>
 
-    <script src="./data.json"></script>
+    <script src="./id.json"></script>
 </body>
 
 </html>
