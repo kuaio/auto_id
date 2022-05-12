@@ -226,6 +226,7 @@ def check_appleid(item):
             find_enable_by_class(driver, "last").click()
             time.sleep(2)
             find_enable_by_class(driver, "last").click()
+            time.sleep(1)
             find_element_by_class(driver, "done")
 
             msg = apple_id + " 已解锁，新密码 %s " % pwd_new
