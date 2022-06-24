@@ -104,7 +104,7 @@ def update_pwd(api_host, apple_id, passwd):
 def createPwd(passwordLength):
     pw = ''
     # * 2 增加数字和特殊字符出现的概率
-    str = string.digits * 2 + string.ascii_letters + '!@#$%^&*()_+=-' * 2
+    str = string.digits * 2 + string.ascii_letters + '!@#$&*_+=-' * 2
     while True:
         # 不包含重复字符的密码
         pw = ''.join(random.sample(str, k=passwordLength))
@@ -335,7 +335,7 @@ for i, item in enumerate(apple_ids):
 
 # 构造一个 json 数据，供静态 HTML 使用
 print('正在写入 JSON 数据...')
-with open(mypath + '/data.json', 'w', encoding='utf-8') as f:
+with open(mypath + '/id.json', 'w', encoding='utf-8') as f:
     json.dump(apple_data, f, indent=4)
 if save:
     print('正在更新 config 数据...')
