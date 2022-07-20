@@ -42,7 +42,10 @@ git clone https://github.com/kuaio/auto_id.git
 ```
 apt update
 apt-get install libgl1
+apt install libgl1-mesa-glx
 apt install -y python3-pip chromium-driver
+apt-get install -y python3-opencv
+pip install opencv-python-headless
 pip3 install -r requirements.txt
 ```
 - 运行
