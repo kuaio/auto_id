@@ -36,11 +36,12 @@ api_host | api地址 | 如果此项不为空，会在修改密码后请求此地
 - 进入网站目录
 - 下载代码 
 ```
-git clone https://github.com/kuaio/auto_id.git .
+git clone https://github.com/kuaio/auto_id.git
 ```
 - 安装依赖
 ```
 apt update
+apt-get install libgl1
 apt install -y python3-pip chromium-driver
 pip3 install -r requirements.txt
 ```
